@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>
+        CardIO Demo App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <ion-list>
+   <ion-item color="">
+    <ion-label floating>Card Holder Name</ion-label>
+    <ion-input type="text" name="cardHolder" [(ngModel)]="cardHolder"></ion-input>
+  </ion-item>
+
+    <ion-item color="">
+    <ion-label floating>Card Number</ion-label>
+    <ion-input type="text" name="cardNumber" [(ngModel)]="cardNumber"></ion-input>
+  </ion-item>
+  <ion-item color="">
+    <ion-label floating>Expiry Date</ion-label>
+    <ion-input type="text" name="date" [(ngModel)]="date"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>CVV/CVC</ion-label>
+    <ion-input type="text" name="cvv" [(ngModel)]="cvv"></ion-input>
+  </ion-item>
+ 
+</ion-list>
+<button ion-button block right color="danger" icon-left (click)="scan()"><ion-icon name="card" ></ion-icon> Scan Card</button>
+</ion-content>
